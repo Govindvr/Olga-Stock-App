@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+/* Main app */
+.header{
+  padding-top: 12px;
+  background: #ffff;
+}
+.content {
+  margin: 24px 16px;
+  padding: 20px;
+}
+.trigger-btn {
+  font-size: 16px;
+  width:  50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Sider */
+.sider{
+  height: 100vh;
+  position:sticky !important;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+.logo{
+  color: blueviolet;
+  margin: 0px 0;
+  font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  font-weight: 500;
 }
-
-.App-link {
-  color: #61dafb;
+.ant-menu-item-selected {
+  background-color: #3c3b40 !important;
+  color: #ffff !important;
 }
+/* Button and Color */
+.ant-btn:hover{
+  color : #3c3b40 !important;
+  border-color: #3c3b40 !important;
+}
+.ant-btn-primary{
+  background-color: #3c3b40 !important;
+}
+.ant-btn-primary:hover{
+  background-color: #3c3b40 !important;
+  color: #ffff !important;
+}
+.primary--color{
+  color: #3c3b40 !important;
+}
+.primary--light--color{
+  color: #4c4a52 !important;
+}
+.secondary--color{
+  color: #3c3b40 !important;
+}
+.light--color{
+  color: #ffff !important;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.grey--color{
+  color: rgb(182,181,181) !important;
 }
