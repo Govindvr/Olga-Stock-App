@@ -39,7 +39,7 @@ const ReportContent = () => {
   });
 
   return (
-    <div style={{ flex: 1 }} ref={componentRef}>
+    <div style={{ flex: 1 }} ref={componentRef} className="print-container">
       <Flex vertical gap="2.3rem">
         <ReportBanner
           setDate={setDate}
@@ -119,49 +119,37 @@ const ReportContent = () => {
                 />
               </Table>
               <Flex justify="space-evenly">
-                <Card
-                  title="Total Add"
-                  size="small"
-                  style={{ textAlign: 'center' }}
-                >
-                  <Typography.Text level={4}>
-                    <Tag color="#87d068" key={reportData[name].total_add}>
-                      {reportData[name].total_add}
-                    </Tag>
-                  </Typography.Text>
+                <Card title="Sales" size="small">
+                  <p>Total Add : {reportData[name].total_add}</p>
+                  <p>Total Sold : {reportData[name].total_sold}</p>
+                  <p>Total Lost : {reportData[name].total_lost}</p>
                 </Card>
-                <Card
-                  title="Total Sold"
-                  size="small"
-                  style={{ textAlign: 'center' }}
-                >
-                  <Typography.Text level={4}>
-                    <Tag color="red" key={reportData[name].total_sold}>
-                      {reportData[name].total_sold}
-                    </Tag>
-                  </Typography.Text>
-                </Card>
-                <Card
-                  title="Total Lost"
-                  size="small"
-                  style={{ textAlign: 'center' }}
-                >
-                  <Typography.Text level={4}>
-                    <Tag color="#c4ae2f" key={reportData[name].total_lost}>
-                      {reportData[name].total_lost}
-                    </Tag>
-                  </Typography.Text>
-                </Card>
-                <Card
-                  title="Balance"
-                  size="small"
-                  style={{ textAlign: 'center' }}
-                >
-                  <Typography.Text level={4}>
-                    <Tag color="blue" key={reportData[name].current_stock}>
-                      {reportData[name].current_stock}
-                    </Tag>
-                  </Typography.Text>
+                <Card title="Balance" size="small">
+                  <p>Balance : {reportData[name].current_stock}</p>
+                  <p>
+                    B1 :{' '}
+                    {
+                      reportData[name].data[reportData[name].data.length - 1][
+                        'b1'
+                      ]
+                    }
+                  </p>
+                  <p>
+                    B2 :{' '}
+                    {
+                      reportData[name].data[reportData[name].data.length - 1][
+                        'b2'
+                      ]
+                    }
+                  </p>
+                  <p>
+                    B3 :{' '}
+                    {
+                      reportData[name].data[reportData[name].data.length - 1][
+                        'b3'
+                      ]
+                    }
+                  </p>
                 </Card>
               </Flex>
             </Card>

@@ -4,6 +4,23 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
-body{
+body {
   background-color: #dde6ed;
+}
+@media print {
+  @page {
+    size: A3;
+    margin: 15mm; /* Adjust the margin as needed */
+  }
+  html,
+  body {
+    width: 297mm;
+    height: 420mm;
+    font-size: 11px;
+    background: #fff;
+    overflow: visible;
+  }
+  .print-container {
+    padding: 10mm; /* Adjust the padding if needed */
+  }
 }
