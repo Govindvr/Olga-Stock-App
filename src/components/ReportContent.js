@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReportBanner from './ReportBanner';
-import { Flex, Table, Tag, Card, Typography } from 'antd';
+import { Flex, Table, Card } from 'antd';
 import { useReactToPrint } from 'react-to-print';
 import { convertDateTime } from '../utils/convertDateTime';
 
