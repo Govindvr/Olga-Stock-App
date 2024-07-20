@@ -17,7 +17,7 @@ const Sidebar = () => {
     <>
       <Flex align="center" justify="center">
         <div className="logo">
-          <img src={myIcon} width={80} height={80} />
+          <img src={myIcon} width={80} height={80} alt='Olga Constructions'/>
         </div>
       </Flex>
       <Menu
