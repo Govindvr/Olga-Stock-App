@@ -1,10 +1,9 @@
 import React from 'react';
 import { Card, Flex, Typography, DatePicker, Button } from 'antd';
 import { PrinterOutlined } from '@ant-design/icons';
-import {convertDateTime} from '../utils/convertDateTime'
+import { convertDateTimeUTC } from '../utils/convertDateTime';
 
 const dayjs = require('dayjs');
-
 
 const ReportBanner = (props) => {
   const onChange = (date, dateString) => {
@@ -19,7 +18,8 @@ const ReportBanner = (props) => {
             Report
           </Typography.Title>
           <Typography.Text type="secondary" strong>
-            Report for Stock for Month Generated on {convertDateTime(dayjs())}.
+            Report for Stock for Month Generated on{' '}
+            {convertDateTimeUTC(dayjs())}.
           </Typography.Text>
           <Flex align="flex-start" justify="space-around" gap={200}>
             <div>
